@@ -1521,3 +1521,8 @@ Author URI: http://yakuzi.eu
 		width: 1000px;
 	  }
 	}
+	.big-margin { margin-top: 15px;margin-bottom: 15px}
+	.long-button { width:120px;}
+	.float-right {float: right;}
+	.cursor-default {cursor: default;}
+	.white-color{color: white;}
