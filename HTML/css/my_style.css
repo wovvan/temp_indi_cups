@@ -9,3 +9,29 @@
 .chat-text{
   float:left; width: 220px;
 }
+.mod-game{
+  font-size:18px;
+  text-align:center;
+  width:200px;
+  width: 160px;
+  display: block;
+  float:left;
+}
+.count-player{
+  font-size:18px;
+  margin-left:10px;
+  width: 60px;
+  display: block;
+  float:left;
+}
+.options-game{
+  float:left;
+  width: 160px;
+}
+.rule-game{
+  float:left;
+  margin-left:3px;
+}
+.but-enter-game{
+  font-size: 22px; padding: 0 10px; margin-top: 13px;
+}

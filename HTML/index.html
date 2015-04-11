@@ -233,7 +233,7 @@
                     <div class="form-wrap">
                       <form method="post" class="form" role="form">
                         <div class="form-group">
-                          <input type="text" class="form-control" autocomplete="off" name="message" placeholder="Введите текст вашего сообщения...">
+                          <input type="text" class="form-control" autocomplete="off" name="message" placeholder="Введите текст вашего сообщения..." maxlength="500">
                         </div>
                         <div class="text-center" style="font-size:18px;">
                           <button class="btn-primary btn-flat">Отправить</button>
@@ -592,15 +592,15 @@
                 <div class="col-md-10">
                    <div class="rule clearfix" style="float:left;">
                     <div style="margin:5px;" class="clearfix">
-                      <span class="label label-danger" style="font-size:18px;text-align:center;width:200px; width: 160px; display: block;float:left;">
+                      <span class="label label-danger mod-game">
                         AP + боты
                       </span>
-                      <span class="label label-success" style="font-size:18px;margin-left:10px; width: 60px; display: block;float:left;">
+                      <span class="label label-success count-player">
                         5x5
                       </span>
                     </div>
                     <div style="margin:10px 5px 5px 5px;" class="clearfix">
-                      <div style="float:left; width: 160px;">
+                      <div class="options-game">
                         <h5>
                           Опции:
                         </h5>
@@ -618,7 +618,7 @@
                         <h5>
                           Условия:
                         </h5>
-                          <div style="float:left;margin-left:3px;">
+                          <div class="rule-game">
                           <img src="images/prettyPhoto/for_game/scalp.png" alt="">
                           <span class="label label-danger" style="margin-left:2px">
                             2
@@ -655,91 +655,13 @@
                         </span>     
                     </div>  
                     <div class="enter">
-                      <a href="#create-game" data-toggle="modal" class="btn btn-success btn-block btn-flat" style="font-size: 22px; padding: 0 10px; margin-top: 13px;">Войти</a> 
+                      <a href="#create-game" data-toggle="modal" class="btn btn-success btn-block btn-flat but-enter-game">Войти</a> 
                     </div>
                   </div>
                 </div>
               </section>
-          <!-- section  -->
-              <section class="clearfix">
-                <div class="pull-left col-md-2 no-padding" style="">
-                 <div style="text-align: center;"> 
-                  <img src="holder.js/100%x100" alt="" class="img-thumbnail" />
-                  <h4>NikeName</h4>
-                 </div>
-                </div>
-                <div class="col-md-10">
-                   <div class="rule clearfix" style="float:left;">
-                    <div style="margin:5px;" class="clearfix">
-                      <span class="label label-danger" style="font-size:18px;text-align:center;width:200px; width: 160px; display: block;float:left;">
-                        AP + боты
-                      </span>
-                      <span class="label label-success" style="font-size:18px;margin-left:10px; width: 60px; display: block;float:left;">
-                        5x5
-                      </span>
-                    </div>
-                    <div style="margin:10px 5px 5px 5px;" class="clearfix">
-                      <div style="float:left; width: 160px;">
-                        <h5>
-                          Опции:
-                        </h5>
-                        <div style="float:left;">
-                          <img src="images/prettyPhoto/for_game/netral_crip.png" alt="">
-                          </div>
-                          <div style="float:left;margin-left:3px;">
-                          <img src="images/prettyPhoto/for_game/rune.png" alt="">
-                          </div>
-                          <div style="float:left;margin-left:3px;">
-                          <img src="images/prettyPhoto/for_game/only_mid.png" alt="">
-                          </div>
-                      </div>
-                      <div style="float:left; margin-left:10px;">
-                        <h5>
-                          Условия:
-                        </h5>
-                          <div style="float:left;margin-left:3px;">
-                          <img src="images/prettyPhoto/for_game/scalp.png" alt="">
-                          <span class="label label-danger" style="margin-left:2px">
-                            2
-                          </span>
-                          </div>
-                          <div style="float:left;margin-left:3px;">
-                          <img src="images/prettyPhoto/for_game/tower.png" alt="">
-                          <span class="label label-success" style="margin-left:2px">
-                            1
-                          </span>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="time-stav clearfix" style="float:left;margin:5px;">
-                    <div class="time">
-                      <h5>Время:</h5>
-                      <h5 class="my-time">
-                        22:48
-                      </h5>     
-                    </div>  
-                    <div class="stav">
-                      <h5 style="margin-bottom: 7px;">Ставка:</h5>
-                        <span class="label label-danger my-stav" style="font-size:15px;">
-                          50 RUB
-                        </span>   
-                    </div>
-                  </div>
-                  <div class="place-enter clearfix" style="float:left;margin:5px;">
-                    <div class="place">
-                      <h5 style="margin-bottom: 7px;">Места:</h5>
-                      <span class="label label-danger my-place" style="font-size:15px;">
-                          7/10
-                        </span>     
-                    </div>  
-                    <div class="enter">
-                      <a href="#create-game" data-toggle="modal" class="btn btn-success btn-block btn-flat" style="font-size: 24px; padding: 0 10px; margin-top: 13px;">Войти</a> 
-                    </div>
-                  </div>
-                </div>
-              </section>
-          <!-- section  -->
+              
+              <!-- section  -->
               <section class="clearfix">
                 <div class="pull-left col-md-2 no-padding" style="">
                  <div style="text-align: center;"> 
@@ -750,15 +672,15 @@
                 <div class="col-md-10">
                    <div class="rule clearfix" style="float:left;">
                     <div style="margin:5px;" class="clearfix">
-                      <span class="label label-danger" style="font-size:18px;text-align:center;width:200px; width: 160px; display: block;float:left;">
+                      <span class="label label-danger mod-game">
                         AP + боты
                       </span>
-                      <span class="label label-success" style="font-size:18px;margin-left:10px; width: 60px; display: block;float:left;">
+                      <span class="label label-success count-player">
                         5x5
                       </span>
                     </div>
                     <div style="margin:10px 5px 5px 5px;" class="clearfix">
-                      <div style="float:left; width: 160px;">
+                      <div class="options-game">
                         <h5>
                           Опции:
                         </h5>
@@ -776,7 +698,7 @@
                         <h5>
                           Условия:
                         </h5>
-                          <div style="float:left;margin-left:3px;">
+                          <div class="rule-game">
                           <img src="images/prettyPhoto/for_game/scalp.png" alt="">
                           <span class="label label-danger" style="margin-left:2px">
                             2
@@ -813,12 +735,13 @@
                         </span>     
                     </div>  
                     <div class="enter">
-                      <a href="#create-game" data-toggle="modal" class="btn btn-success btn-block btn-flat" style="font-size: 24px; padding: 0 10px; margin-top: 13px;">Войти</a> 
+                      <a href="#create-game" data-toggle="modal" class="btn btn-success btn-block btn-flat but-enter-game">Войти</a> 
                     </div>
                   </div>
                 </div>
               </section>
-          <!-- section  -->
+              
+              <!-- section  -->
               <section class="clearfix">
                 <div class="pull-left col-md-2 no-padding" style="">
                  <div style="text-align: center;"> 
@@ -829,15 +752,15 @@
                 <div class="col-md-10">
                    <div class="rule clearfix" style="float:left;">
                     <div style="margin:5px;" class="clearfix">
-                      <span class="label label-danger" style="font-size:18px;text-align:center;width:200px; width: 160px; display: block;float:left;">
+                      <span class="label label-danger mod-game">
                         AP + боты
                       </span>
-                      <span class="label label-success" style="font-size:18px;margin-left:10px; width: 60px; display: block;float:left;">
+                      <span class="label label-success count-player">
                         5x5
                       </span>
                     </div>
                     <div style="margin:10px 5px 5px 5px;" class="clearfix">
-                      <div style="float:left; width: 160px;">
+                      <div class="options-game">
                         <h5>
                           Опции:
                         </h5>
@@ -855,7 +778,7 @@
                         <h5>
                           Условия:
                         </h5>
-                          <div style="float:left;margin-left:3px;">
+                          <div class="rule-game">
                           <img src="images/prettyPhoto/for_game/scalp.png" alt="">
                           <span class="label label-danger" style="margin-left:2px">
                             2
@@ -892,12 +815,13 @@
                         </span>     
                     </div>  
                     <div class="enter">
-                      <a href="#create-game" data-toggle="modal" class="btn btn-success btn-block btn-flat" style="font-size: 24px; padding: 0 10px; margin-top: 13px;">Войти</a> 
+                      <a href="#create-game" data-toggle="modal" class="btn btn-success btn-block btn-flat but-enter-game">Войти</a> 
                     </div>
                   </div>
                 </div>
               </section>
-          <!-- section  -->
+              
+              <!-- section  -->
               <section class="clearfix">
                 <div class="pull-left col-md-2 no-padding" style="">
                  <div style="text-align: center;"> 
@@ -908,15 +832,15 @@
                 <div class="col-md-10">
                    <div class="rule clearfix" style="float:left;">
                     <div style="margin:5px;" class="clearfix">
-                      <span class="label label-danger" style="font-size:18px;text-align:center;width:200px; width: 160px; display: block;float:left;">
+                      <span class="label label-danger mod-game">
                         AP + боты
                       </span>
-                      <span class="label label-success" style="font-size:18px;margin-left:10px; width: 60px; display: block;float:left;">
+                      <span class="label label-success count-player">
                         5x5
                       </span>
                     </div>
                     <div style="margin:10px 5px 5px 5px;" class="clearfix">
-                      <div style="float:left; width: 160px;">
+                      <div class="options-game">
                         <h5>
                           Опции:
                         </h5>
@@ -934,7 +858,7 @@
                         <h5>
                           Условия:
                         </h5>
-                          <div style="float:left;margin-left:3px;">
+                          <div class="rule-game">
                           <img src="images/prettyPhoto/for_game/scalp.png" alt="">
                           <span class="label label-danger" style="margin-left:2px">
                             2
@@ -971,12 +895,171 @@
                         </span>     
                     </div>  
                     <div class="enter">
-                      <a href="#create-game" data-toggle="modal" class="btn btn-success btn-block btn-flat" style="font-size: 24px; padding: 0 10px; margin-top: 13px;">Войти</a> 
+                      <a href="#create-game" data-toggle="modal" class="btn btn-success btn-block btn-flat but-enter-game">Войти</a> 
                     </div>
                   </div>
                 </div>
               </section>
-        
+              
+              <!-- section  -->
+              <section class="clearfix">
+                <div class="pull-left col-md-2 no-padding" style="">
+                 <div style="text-align: center;"> 
+                  <img src="holder.js/100%x100" alt="" class="img-thumbnail"/>
+                  <h4>NikeName</h4>
+                 </div>
+                </div>
+                <div class="col-md-10">
+                   <div class="rule clearfix" style="float:left;">
+                    <div style="margin:5px;" class="clearfix">
+                      <span class="label label-danger mod-game">
+                        AP + боты
+                      </span>
+                      <span class="label label-success count-player">
+                        5x5
+                      </span>
+                    </div>
+                    <div style="margin:10px 5px 5px 5px;" class="clearfix">
+                      <div class="options-game">
+                        <h5>
+                          Опции:
+                        </h5>
+                        <div style="float:left;">
+                          <img src="images/prettyPhoto/for_game/netral_crip.png" alt="">
+                          </div>
+                          <div style="float:left;margin-left:3px;">
+                          <img src="images/prettyPhoto/for_game/rune.png" alt="">
+                          </div>
+                          <div style="float:left;margin-left:3px;">
+                          <img src="images/prettyPhoto/for_game/only_mid.png" alt="">
+                          </div>
+                      </div>
+                      <div style="float:left; margin-left:10px;">
+                        <h5>
+                          Условия:
+                        </h5>
+                          <div class="rule-game">
+                          <img src="images/prettyPhoto/for_game/scalp.png" alt="">
+                          <span class="label label-danger" style="margin-left:2px">
+                            2
+                          </span>
+                          </div>
+                          <div style="float:left;margin-left:3px;">
+                          <img src="images/prettyPhoto/for_game/tower.png" alt="">
+                          <span class="label label-success" style="margin-left:2px">
+                            1
+                          </span>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="time-stav clearfix" style="float:left;margin:5px;">
+                    <div class="time">
+                      <h5>Время:</h5>
+                      <h5 class="my-time">
+                        22:48
+                      </h5>     
+                    </div>  
+                    <div class="stav">
+                      <h5 style="margin-bottom: 7px;">Ставка:</h5>
+                        <span class="label label-danger my-stav" style="font-size:15px;">
+                          50 RUB
+                        </span>   
+                    </div>
+                  </div>
+                  <div class="place-enter clearfix" style="float:left;margin:5px;">
+                    <div class="place">
+                      <h5 style="margin-bottom: 7px;">Места:</h5>
+                      <span class="label label-danger my-place" style="font-size:15px;">
+                          7/10
+                        </span>     
+                    </div>  
+                    <div class="enter">
+                      <a href="#create-game" data-toggle="modal" class="btn btn-success btn-block btn-flat but-enter-game">Войти</a> 
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+              <!-- section  -->
+              <section class="clearfix">
+                <div class="pull-left col-md-2 no-padding" style="">
+                 <div style="text-align: center;"> 
+                  <img src="holder.js/100%x100" alt="" class="img-thumbnail"/>
+                  <h4>NikeName</h4>
+                 </div>
+                </div>
+                <div class="col-md-10">
+                   <div class="rule clearfix" style="float:left;">
+                    <div style="margin:5px;" class="clearfix">
+                      <span class="label label-danger mod-game">
+                        AP + боты
+                      </span>
+                      <span class="label label-success count-player">
+                        5x5
+                      </span>
+                    </div>
+                    <div style="margin:10px 5px 5px 5px;" class="clearfix">
+                      <div class="options-game">
+                        <h5>
+                          Опции:
+                        </h5>
+                        <div style="float:left;">
+                          <img src="images/prettyPhoto/for_game/netral_crip.png" alt="">
+                          </div>
+                          <div style="float:left;margin-left:3px;">
+                          <img src="images/prettyPhoto/for_game/rune.png" alt="">
+                          </div>
+                          <div style="float:left;margin-left:3px;">
+                          <img src="images/prettyPhoto/for_game/only_mid.png" alt="">
+                          </div>
+                      </div>
+                      <div style="float:left; margin-left:10px;">
+                        <h5>
+                          Условия:
+                        </h5>
+                          <div class="rule-game">
+                          <img src="images/prettyPhoto/for_game/scalp.png" alt="">
+                          <span class="label label-danger" style="margin-left:2px">
+                            2
+                          </span>
+                          </div>
+                          <div style="float:left;margin-left:3px;">
+                          <img src="images/prettyPhoto/for_game/tower.png" alt="">
+                          <span class="label label-success" style="margin-left:2px">
+                            1
+                          </span>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="time-stav clearfix" style="float:left;margin:5px;">
+                    <div class="time">
+                      <h5>Время:</h5>
+                      <h5 class="my-time">
+                        22:48
+                      </h5>     
+                    </div>  
+                    <div class="stav">
+                      <h5 style="margin-bottom: 7px;">Ставка:</h5>
+                        <span class="label label-danger my-stav" style="font-size:15px;">
+                          50 RUB
+                        </span>   
+                    </div>
+                  </div>
+                  <div class="place-enter clearfix" style="float:left;margin:5px;">
+                    <div class="place">
+                      <h5 style="margin-bottom: 7px;">Места:</h5>
+                      <span class="label label-danger my-place" style="font-size:15px;">
+                          7/10
+                        </span>     
+                    </div>  
+                    <div class="enter">
+                      <a href="#create-game" data-toggle="modal" class="btn btn-success btn-block btn-flat but-enter-game">Войти</a> 
+                    </div>
+                  </div>
+                </div>
+              </section>
               
               
               <ul class="section-title clearfix">
