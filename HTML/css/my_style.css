@@ -1,0 +1,11 @@
+.nikename{
+  font-weight: bold;
+}
+.time{
+  font-weight: bold;
+  float:left;
+  font-size:15px;
+}
+.chat-text{
+  float:left; width: 220px;
+}
