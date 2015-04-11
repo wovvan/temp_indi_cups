@@ -9,3 +9,90 @@
 .chat-text{
   float:left; width: 220px;
 }
+
+
+
+/*------------------------------------------------------------MYSTYLE------------------------------------------------------*/
+  .cont-container{
+    margin: 0;
+    text-align: center;
+  }
+  .cont-container .fa-1{
+    transform: rotate(180deg);
+  }
+  .cont-container .margin-left-right {
+    margin: 0 10px 0
+  } 
+  .cont-container h3{
+    display: inline-block;
+  }
+  .padding-top{
+    padding-top: 10px;
+  }  
+  .border-none{
+    border: none;
+  } 
+  .dotabuff-logo{
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.6);
+    /*border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;*/
+    background: #ea030e;
+    display: inline-block;
+    font-family: "Arial";
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 8px 8px 8px;
+  }
+  .dotabuff-logo a{
+    color: white;
+    text-shadow: 0 0 3px #b8020b;
+  }
+  .dotabuff-logo a:hover{
+    color: white;
+  }
+  .dotabuff-logo:hover{
+    background: #E84A52;
+    color: white;
+  }
+  .command-button {
+    padding:0;
+    line-height: 1;
+  }
+  .command-button a{
+    color:white;
+  }
+  .command-button a:hover{
+    color:white;
+  }
+  .img30-container{
+    display: inline-block;
+    float:left;
+  }
+  .img30{
+    height:30px;
+    width:30px;
+  }
+  .img40{
+    height:40px;
+    width:40px;
+  }
+  .rate-skill{
+    margin-bottom:0;
+    margin-left:15px;
+  }
+  .rate-skill span{
+    display:block;
+    text-align:center;
+  }
+  .width49{
+    width:49%;
+  }
+  .panel-scroll{
+    height: 400px;
+    overflow: auto;
+  }
+  .panel-scroll-freids{
+    height: 200px;
+    overflow: auto;
+  }
+  
