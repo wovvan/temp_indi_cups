@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/my_style.css">
 <link rel="stylesheet" type="text/css" href="css/docs.min.css">
-<link rel="stylesheet" type="text/css" href="css/colors/green.css" id="colors"/>
+<link rel="stylesheet" type="text/css" href="css/colors/red.css" id="colors"/>
 
 <!-- ======= STYLE SWITCHER ======= --> 
 <link rel="stylesheet" href="css/styleswitcher.css">
@@ -26,10 +26,10 @@
           <img src="http://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_small.png">
         </li>
         <li>
-          <a href="#register" data-toggle="faq">FAQ</a>
+          <a href="#register">FAQ</a>
         </li>
         <li>
-          <a href="#register" data-toggle="help">Помощь</a>
+          <a href="#register">Помощь</a>
         </li>
       </ul>
       <!--<div id="top-social">
@@ -574,12 +574,155 @@
                 <!-- ./facebook -->
               </div>
             </div>
+            <!-- Modal -->
+            <div class="modal" id="create-game" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 id="myModalLabel">Создать заявку</h3>
+                  </div>
+                  <div class="modal-body">
+                    <p>При создании заявки с вашего счета списывается сумма равная вашей ставке</p>
+                    <h3>Тип игры</h3>
+                    <ul class="margin-bottom nav nav-pills sel-type-create-game">
+                        <li class="active"><a v="1" href="#">1x1</a></li>
+                        <li><a v="2" href="#">2x2</a></li>
+                        <li><a v="3" href="#">3x3</a></li>
+                        <li><a v="4" href="#">4x4</a></li>
+                        <li><a v="5" href="#">5x5</a></li>
+                    </ul>
+                    <input name="type" type="hidden" id="create_game_type" value="1">
+                    <h3>Мод игры</h3>
+                    <ul class="nav nav-pills margin-bottom sel-mode-create-game">
+                        <li class="active"><a v="1" href="#" data-toggle="tooltip" data-placement="top"
+                                              title="All Pick">AP</a></li>
+                        <li><a v="2" href="#" data-toggle="tooltip" data-placement="top" title="Captains mode">CM</a>
+                        </li>
+                        <li><a v="3" href="#" data-toggle="tooltip" data-placement="top" title="All Random">AR</a></li>
+                        <li><a v="4" href="#" data-toggle="tooltip" data-placement="top" title="Single Draft">SD</a>
+                        </li>
+                        <li><a v="5" href="#" data-toggle="tooltip" data-placement="top" title="Mid Only">MO</a></li>
+                        <li><a v="7" href="#" data-toggle="tooltip" data-placement="top"
+                               title="Для всех один случайный герой">ARSH</a></li>
+                        <li><a v="8" href="#" data-toggle="tooltip" data-placement="top"
+                               title="All Pick (5x5) с ботами - свободные слоты занимают боты">AP+AI</a></li>
+                        <li><a v="9" href="#" data-toggle="tooltip" data-placement="top"
+                               title="All Random (5x5) с ботами - свободные слоты занимают боты">AR+AI</a></li>
+                    </ul>
+                    <input name="mode" type="hidden" id="create_game_mode" value="1">
+                    <h3>Ставка</h3>
+                    <ul class="nav margin-bottom nav-pills sel-stavka-create-game">
+                        <li class="active"><a v="10" href="#">10 руб.</a></li>
+                        <li><a v="50" href="#">50 руб.</a></li>
+                        <li><a v="100" href="#">100 руб.</a></li>
+                        <li><a v="200" href="#">200 руб.</a></li>
+                        <li><a v="300" href="#">300 руб.</a></li>
+                        <li><a v="500" href="#">500 руб.</a></li>
+                    </ul>
+                    <label>Своя ставка</label>
+                    <div class="input-group margin-bottom">
+                        <input name="stavka" type="text" class="form-control" id="create_game_stavka" value="50">
+                        <span class="input-group-addon" data-toggle="tooltip" data-placement="top"
+                              title="К примеру 1 : 2 означает что при ставке 10р, вы отдаете 20р а ваш опонент 10р. Если вы выиграте вы получите 10р. если ваш противник то он получит 20р.">
+                            <span id="plecho_stavka">
+                                плечо
+                                <select name="plecho">
+                                    <option value="0">1 : 1</option>
+                                    <option value="1">1 : 2</option>
+                                    <option value="2">1 : 3</option>
+                                    <option value="3">1 : 4</option>
+                                    <option value="4">1 : 5</option>
+                                </select>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="">
+                        <h3>Опции</h3>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="form-group">
+                                    <div class="game-options">
+                                        <label>
+                                            <input name="rune" type="hidden" value="0">
+                                            <input type="checkbox" name="rune" value="1" checked> С рунами
+                                        </label>
+                                        <label>
+                                            <input name="not_neutral" type="hidden" value="1">
+                                            <input type="checkbox" name="not_neutral" value="0" checked> С нейтралами
+                                        </label>
+                                        <label id="not_top_bott_line">
+                                            <input name="not_top_bott_line" type="hidden" value="0">
+                                            <input type="checkbox" name="not_top_bott_line" value="1"> Крипы только мид
+                                        </label>
+                                    </div>
+                                    <label id="hidden_lobby">
+                                        <input name="hidden" type="hidden" value="0">
+                                        <input type="checkbox" name="hidden" value="1"> Скрывать логины
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="game-options">
+                                    <div class="form-group">
+
+                                        <label>До</label>
+                                        <select name="limit_kill">
+                                            <option value="0">-----</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                        смертей
+                                    </div>
+
+                                    <div class="disable_hero label label-danger">
+                                        без бруды и джакиро
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="form-group">
+                                    <div class="game-options">
+                                        <label>До</label>
+                                        <select name="limit_tower">
+                                            <option value="0">-----</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                        </select>
+                                        вышек
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="solomid_desc hidden">
+                        <h3>Опции</h3>
+                        2 кила или 1 вышка
+                    </div>
+                    <div id="id_hero_sel" style="display: none;">
+                        <label>Герой</label>
+                        <select name="hero" id="select_heroes">
+                            <option value="0">Не важно</option>
+                        </select>
+                    </div>
+                </div>
+                  <div class="modal-footer">
+                    <button class="btn margin-top" data-dismiss="modal" aria-hidden="true">Закрыть</button>
+                    <button class="btn margin-top btn-primary">Создать заявку</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Modal -->
             <!-- ./sidebar section -->
             <div class="col-md-8 no-padding">
               <div class="padding">
               <ul class="section-title no-margin-top clearfix">
                   <li><h3>Активные игры</h3></li>
-                  <li><a href="#create-game" data-toggle="modal" class="btn btn-success btn-block btn-flat">Создать игру</a></li>
+                  <li style="float:right;"><a href="#create-game" data-toggle="modal" class="btn btn-inverse btn-flat">Создать игру</a></li>
               </ul>
               <!-- section  -->
               <section class="clearfix">
@@ -655,7 +798,7 @@
                         </span>     
                     </div>  
                     <div class="enter">
-                      <a href="#create-game" data-toggle="modal" class="btn btn-success btn-block btn-flat but-enter-game">Войти</a> 
+                      <a href="lobby.html" class="btn btn-success btn-block btn-flat but-enter-game">Войти</a> 
                     </div>
                   </div>
                 </div>
@@ -735,7 +878,7 @@
                         </span>     
                     </div>  
                     <div class="enter">
-                      <a href="#create-game" data-toggle="modal" class="btn btn-success btn-block btn-flat but-enter-game">Войти</a> 
+                      <a href="lobby.html" class="btn btn-success btn-block btn-flat but-enter-game">Войти</a> 
                     </div>
                   </div>
                 </div>
@@ -815,7 +958,7 @@
                         </span>     
                     </div>  
                     <div class="enter">
-                      <a href="#create-game" data-toggle="modal" class="btn btn-success btn-block btn-flat but-enter-game">Войти</a> 
+                      <a href="lobby.html" class="btn btn-success btn-block btn-flat but-enter-game">Войти</a> 
                     </div>
                   </div>
                 </div>
@@ -895,7 +1038,7 @@
                         </span>     
                     </div>  
                     <div class="enter">
-                      <a href="#create-game" data-toggle="modal" class="btn btn-success btn-block btn-flat but-enter-game">Войти</a> 
+                      <a href="lobby.html" class="btn btn-success btn-block btn-flat but-enter-game">Войти</a> 
                     </div>
                   </div>
                 </div>
@@ -975,7 +1118,7 @@
                         </span>     
                     </div>  
                     <div class="enter">
-                      <a href="#create-game" data-toggle="modal" class="btn btn-success btn-block btn-flat but-enter-game">Войти</a> 
+                      <a href="lobby.html" class="btn btn-success btn-block btn-flat but-enter-game">Войти</a> 
                     </div>
                   </div>
                 </div>
@@ -1055,7 +1198,7 @@
                         </span>     
                     </div>  
                     <div class="enter">
-                      <a href="#create-game" data-toggle="modal" class="btn btn-success btn-block btn-flat but-enter-game">Войти</a> 
+                      <a href="lobby.html" class="btn btn-success btn-block btn-flat but-enter-game">Войти</a> 
                     </div>
                   </div>
                 </div>
@@ -1285,6 +1428,67 @@
   </div><!-- /.modal --> 
   <!-- ./sign-in modal -->
   
+  <!-- register modal -->
+  <!-- Modal -->
+  <div id="register" class="modal" tabindex="-1" role="dialog" aria-labelledby="register-title" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h4 class="modal-title" id="register-title"><i class="fa fa-user"></i> Create Account</h4>
+      </div>
+      <div class="modal-body">
+      <form action="#" method="post" class="clearfix">
+        <h5>New Account</h5>
+        <div class="alert alert-simple"><i class="fa fa-info"></i> All fields are required</div>
+        <div class="row">
+        <div class="control-group col-md-6">
+          <label class="control-label" for="username">Username</label>
+          <div class="controls">
+            <input type="text" class="form-control" id="username" placeholder="Username" required>
+          </div>
+        </div>
+        <div class="control-group col-md-6">
+          <label class="control-label" for="email">Email</label>
+          <div class="controls">
+            <input type="text" class="form-control" id="email" placeholder="Email" required>
+          </div>
+        </div>
+        <div class="control-group col-md-6">
+          <label class="control-label" for="password">Password</label>
+          <div class="controls">
+            <input type="password" class="form-control" id="password" placeholder="Password" required>
+          </div>
+        </div>
+        <div class="control-group col-md-6">
+          <label class="control-label" for="repeat-password">Repeat Password</label>
+          <div class="controls">
+            <input type="password" class="form-control" id="repeat-password" placeholder="Password" required>
+          </div>
+        </div>
+        <div class="control-group col-md-12">
+          <label class="control-label" for="repeat-password">Repeat Password</label>
+          <div class="controls">
+            <input type="password" class="form-control" id="repeat-password" placeholder="Password" required>
+          </div>
+        </div>
+        <div class="control-group col-md-12">
+          <div class="checkbox check-default no-padding no-margin">
+            <input type="checkbox" id="checkbox" checked="checked"> 
+            <label for="checkbox">Accept terms and service.</label>
+          </div>
+        </div>
+        </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-primary">Create Account</button>
+      </div>
+    </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal --> 
+  <!-- ./register modal -->
+
   <!-- register modal -->
   <!-- Modal -->
   <div id="register" class="modal" tabindex="-1" role="dialog" aria-labelledby="register-title" aria-hidden="true">

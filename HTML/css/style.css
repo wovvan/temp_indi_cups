@@ -24,6 +24,14 @@ Author URI: http://yakuzi.eu
 	font-style: normal;
 }
 
+@font-face {
+	font-family: "BebasNeueRegular";
+	src: url("../fonts/BebasNeue.eot?") format("eot"),
+		 url("../fonts/BebasNeueRegular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
 /***
 	Index
 	=================
@@ -183,9 +191,6 @@ Author URI: http://yakuzi.eu
 	  margin-right: auto;
 	  margin-left: auto;
 	}
-	.modal {
-		overflow: hidden;
-	}
 	.modal-header{
 		background-color: #FFF;
 		box-shadow: 0 1px 0 #fff, inset 0 1px 0 #fff;
@@ -261,7 +266,7 @@ Author URI: http://yakuzi.eu
 	.modal-body input[type="text"], .modal-body input[type="password"] {	
 		font-size: 14px;
 		height: auto;
-		padding: 11px 18px;
+		--padding: 11px 18px;
 		-webkit-border-radius: 2px;
 		-moz-border-radius: 2px;
 		border-radius: 2px;
@@ -723,8 +728,6 @@ Author URI: http://yakuzi.eu
 	}
 	section h6 {
 		font: 14px 'BebasNeue', Arial, sans-serif;
-		text-shadow: 1px 1px 0px #FFF;
-		font-weight: none;
 	}
 	section.pull-left .thumbnail {
 		margin-top: 10px;
@@ -1526,3 +1529,11 @@ Author URI: http://yakuzi.eu
 	.float-right {float: right;}
 	.cursor-default {cursor: default;}
 	.white-color{color: white;}
+	a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {background-color: #bf1313; border-color: #ddd;}
+	.modal {position: fixed;}
+	.margin-bottom{margin-bottom: 10px;}
+	.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+  background-color: #bf1313;
+}
+	label {font-weight: 500;}
+	.margin-top{margin-top: 10px;}

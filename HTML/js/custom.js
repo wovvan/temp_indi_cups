@@ -114,4 +114,66 @@ jQuery('#navigation li.dropdown').hover(function() {
 }, function() {
   jQuery(this).find('.dropdown-menu').stop(true, true).hide();
 });
+
+$(document).on('click', '.sel-mode-create-game a', function() {
+    var actClass = $(this).attr('active-class');
+    if (actClass) {
+        $(this).closest('.sel-mode-create-game').find('a').removeClass(actClass);
+        $(this).addClass(actClass);
+    }
+    $(this).closest('ul').find('li').removeClass('active');
+    $(this).closest('li').addClass('active');
+    var val = $(this).attr('v');
+    $('#create_game_mode').val(val);
+    $(document).trigger('triggerShowHideOptions');
+});
+$(document).on('click', '.sel-stavka-create-game a', function() {
+    $(this).closest('ul').find('li').removeClass('active');
+    $(this).closest('li').addClass('active');
+    $('#create_game_stavka').val($(this).attr('v'));
+});
+$(document).on('click', '.sel-type-create-game a', function() {
+    $(this).closest('ul').find('li').removeClass('active');
+    $(this).closest('li').addClass('active');
+    var val = $(this).attr('v');
+    $('#create_game_type').val(val);
+    $(document).trigger('triggerShowHideOptions');
+});
+$(document).on('triggerShowHideOptions', function() {
+    var valType = $('#create_game_type').val();
+    var valMode = $('#create_game_mode').val();
+
+    if ( (valMode==5) && valType==1) {
+        $('#id_hero_sel').show();
+        $('#not_top_bott_line').hide();
+    }else{
+        $('#id_hero_sel').hide();
+        $('#not_top_bott_line').show();
+    }
+
+    if (valType==1) {
+        $('#plecho_stavka').show();
+        $('.disable_hero').show();
+    }else{
+        $('#plecho_stavka').hide();
+        $('.disable_hero').hide();
+    }
+
+    if (valMode==8 || valMode==9) {
+        $('#id_hero_sel').hide();
+        $('.game-options').hide();
+        $('.solomid_desc').addClass('hidden');
+    }else if (valMode==6) {
+        $('#id_hero_sel').hide();
+        $('.game-options').hide();
+        $('.solomid_desc').removeClass('hidden');
+    }else{
+        $('.solomid_desc').addClass('hidden');
+
+        if (valType!=1 && valType!=2)
+            $('.game-options').hide();
+        else
+            $('.game-options').show();
+    }
+});
      
