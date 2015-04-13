@@ -1529,7 +1529,7 @@ Author URI: http://yakuzi.eu
 	.float-right {float: right;}
 	.cursor-default {cursor: default;}
 	.white-color{color: white;}
-	a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {background-color: #bf1313; border-color: #ddd;}
+	a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {background-color: #cb3333; border-color: #ddd;}
 	.modal {position: fixed;}
 	.margin-bottom{margin-bottom: 10px;}
 	.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
