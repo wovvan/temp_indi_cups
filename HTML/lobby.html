@@ -9,6 +9,8 @@
   
 <!-- ======= STYLE SHEET ======= -->  
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/my_style.css">
+<link rel="stylesheet" type="text/css" href="css/docs.min.css">
 <link rel="stylesheet" type="text/css" href="css/colors/red.css" id="colors"/>
 
 <!-- ======= STYLE SWITCHER ======= --> 
@@ -18,54 +20,30 @@
 <body>
   <!-- sub navigation -->
   <div id="sub-navigation">
-    <div class="container">
-      <ul id="user-interface">
-        <li>
-          <a href="#signin" data-toggle="modal">Login</a>
-        </li>
-        <li>
-          <a href="#register" data-toggle="modal">Create Account</a>
-        </li>
+  <div class="container">
+    <ul id="user-interface">
+      <li>
+        <img src="http://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_small.png">
+      </li>
+      <li>
+        <a href="#register">FAQ</a>
+      </li>
+      <li>
+        <a href="#register">Помощь</a>
+      </li>
+    </ul>
+    <!--<div id="top-social">
+      <span>Receive daily updates:</span>
+      <ul>
+        <li><a href="#" class="tip facebook" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#" class="tip twitter" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#" class="tip youtube" data-toggle="tooltip" data-placement="bottom" title="Youtube"><i class="fa fa-youtube"></i></a></li>
       </ul>
-      <div id="top-social">
-        <span>Receive daily updates:</span>
-        <ul>
-          <li><a href="#" class="tip facebook" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#" class="tip twitter" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#" class="tip youtube" data-toggle="tooltip" data-placement="bottom" title="Youtube"><i class="fa fa-youtube"></i></a></li>
-        </ul>
-      </div>
-      <div class="to-top"><a href="#"><i class="fa fa-chevron-up"></i></a></div>
-    </div>
+    </div>-->
+    <div class="to-top display-none"><a href="#"><i class="fa fa-chevron-up"></i></a></div>
+  </div>
   </div>
   <!-- ./sub navigation -->
-  
-  <!-- top navigation -->
-  <div id="top-navigation">
-    <div class="container">
-      <ul>
-        <li><a href="#" class="active"><i class="fa fa-home"></i></a></li>
-        <li><a href="#">PC</a></li>
-        <li><a href="#">Xbox 360</a></li>
-        <li><a href="#">Xbox One</a></li>
-        <li><a href="#">PS3</a></li>
-        <li><a href="#">PS4</a></li>
-        <li><a href="#">Wii U</a></li>
-        <li><a href="#">PC</a></li>
-        <li><a href="#">Vita</a></li>
-        <li><a href="#">3DS</a></li>
-        <li><a href="#">iPhone</a></li>
-        <li><a href="#">Android</a></li>
-        <li><a href="#">Microsoft</a></li>
-        <li><a href="#">TV</a></li>
-        <li><a href="#">Comics</a></li>
-        <li><a href="#">Reviews</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#">Boards</a></li>
-      </ul>
-    </div>
-  </div>
-  <!-- ./top navigation -->
   
   <!-- header -->
   <header>
@@ -77,35 +55,23 @@
     <div id="navigation">
       <div class="container">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="news.html">News</a></li>
-          <li class="dropdown">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="news.html">Поиск игры</a></li>
+          <li><a href="news.html">Турниры</a></li>
+          <li><a href="news.html">Рейтинг</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="news.html">Статьи</a></li>
+          <li><a href="news.html">Видео</a></li>
+          <!--<li class="dropdown">
           <a href="#">Pages <i class="fa fa-chevron-down"></i></a>
-          <!-- dropdown menu -->
             <ul class="dropdown-menu">
               <li><a href="404.html">404</a></li>
               <li><a href="post.html">Post</a></li>
-              <li><a href="timeline.html">Timeline</a></li>
+              <li><a href="time-localline.html">time-localline</a></li>
               <li><a href="sidebar_left.html">Sidebar Left</a></li>
               <li><a href="sidebar_right.html">Sidebar Right</a></li>
             </ul>
-          </li>
-          <li class="dropdown">
-          <a href="#">Features <i class="fa fa-chevron-down"></i></a>
-            <!-- dropdown menu -->
-            <ul class="dropdown-menu">
-              <li><a href="grids.html">Grids</a></li>
-              <li><a href="typography.html">Typography</a></li>
-              <li><a href="tables.html">Tables, Tabs, Toggles</a></li>
-              <li><a href="buttons.html">Buttons</a></li>
-              <li><a href="alerts.html">Alerts</a></li>
-              <li><a href="thumbnails.html">Thumbnails</a></li>
-              <li><a href="icons.html">Icons</a></li>
-            </ul>
-          </li>
-          <li><a href="forums.html">Forums</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          </li>-->
         </ul>
         <!-- search -->
         <div id="search" class="pull-right">
@@ -228,52 +194,84 @@
                 <!-- chat -->
                 <div class="sidebar-section">
                 <div class="panel panel-default">
-                  <div data-spy="scroll" data-offset="0" class="scrollspy-example" style="height:300px;">
+                  <div data-spy="scroll" data-offset="0" class="scrollspy-example" style="height:300px;margin:0;">
                     <div class="bg-success clearfix" style="padding:10px;">
-                        <div class="chat-text">
+                        <div class="chat-text-local">
                           <span class="nikename">WOVVAN </span> <span class="nikename">:</span> го дота пацаны хочу играть го го го текст го го го текст го го го текст го го го текст 
                         </div>
-                        <div class="time">
+                        <div class="time-local">
                              <span class="label label-warning">21:00</span>
                         </div>
                     </div> 
                     <div class="bg-info clearfix" style="padding:10px;">
-                        <div class="chat-text">
+                        <div class="chat-text-local">
                           <span class="nikename">PGG </span> <span class="nikename">:</span> Все норм сейчас зайду 
                         </div>
-                        <div class="time">
+                        <div class="time-local">
                              <span class="label label-warning">21:01</span>
                         </div>
                     </div>
                     <div class="bg-success clearfix" style="padding:10px;">
-                        <div class="chat-text">
+                        <div class="chat-text-local">
                           <span class="nikename">WOVVAN </span> <span class="nikename">:</span> давай жду
                         </div>
-                        <div class="time">
+                        <div class="time-local">
                              <span class="label label-warning">21:02</span>
                         </div>
                     </div> 
                     <div class="bg-info clearfix" style="padding:10px;">
-                        <div class="chat-text">
+                        <div class="chat-text-local">
                           <span class="nikename">PGG </span> <span class="nikename">:</span> все я зашел 
                         </div>
-                        <div class="time">
+                        <div class="time-local">
                              <span class="label label-warning">21:01</span>
                         </div>
                     </div>
                     <div class="bg-success clearfix" style="padding:10px;">
-                        <div class="chat-text">
+                        <div class="chat-text-local">
                           <span class="nikename">WOVVAN </span> <span class="nikename">:</span> выворачивай корманы, сейчас наказывать буду
                         </div>
-                        <div class="time">
+                        <div class="time-local">
+                             <span class="label label-warning">21:00</span>
+                        </div>
+                    </div> 
+                    <div class="bg-success clearfix" style="padding:10px;">
+                        <div class="chat-text-local">
+                          <span class="nikename">WOVVAN </span> <span class="nikename">:</span> выворачивай корманы, сейчас наказывать буду
+                        </div>
+                        <div class="time-local">
+                             <span class="label label-warning">21:00</span>
+                        </div>
+                    </div> 
+                    <div class="bg-success clearfix" style="padding:10px;">
+                        <div class="chat-text-local">
+                          <span class="nikename">WOVVAN </span> <span class="nikename">:</span> выворачивай корманы, сейчас наказывать буду
+                        </div>
+                        <div class="time-local">
                              <span class="label label-warning">21:00</span>
                         </div>
                     </div> 
                     <div class="bg-info clearfix" style="padding:10px;">
-                        <div class="chat-text">
+                        <div class="chat-text-local">
                           <span class="nikename">PGG </span> <span class="nikename">:</span> Все норм сейчас зайду 
                         </div>
-                        <div class="time">
+                        <div class="time-local">
+                             <span class="label label-warning">21:01</span>
+                        </div>
+                    </div>
+                    <div class="bg-success clearfix" style="padding:10px;">
+                        <div class="chat-text-local">
+                          <span class="nikename">WOVVAN </span> <span class="nikename">:</span> го дота пацаны хочу играть го го го текст го го го текст го го го текст го го го текст 
+                        </div>
+                        <div class="time-local">
+                             <span class="label label-warning">21:00</span>
+                        </div>
+                    </div> 
+                    <div class="bg-info clearfix" style="padding:10px;">
+                        <div class="chat-text-local">
+                          <span class="nikename">PGG </span> <span class="nikename">:</span> Все норм сейчас зайду 
+                        </div>
+                        <div class="time-local">
                              <span class="label label-warning">21:01</span>
                         </div>
                     </div>
@@ -311,68 +309,62 @@
       <div class="footer-widget">
         <div class="container">
           <div class="row no-margin">
-            <!-- latest news -->
+            <!-- about-->
             <div class="col-md-3">
-              <h4>Latest News</h4>
+              <h3>О indiecups.com</h3>
               <ul>
                 <li>
-                  <img src="holder.js/45x35" alt="" />
-                  <a href="#">Vestibulum et condimentum</a>
-                  <span class="clearfix">March 18, 2013</span>
+                  <h5><a href="#">Сайт indiecups.com</a><h5>
                 </li>
                 
                 <li>
-                  <img src="holder.js/45x35" alt="" />
-                  <a href="#">Suspendisse vel urna elit</a>
-                  <span class="clearfix">March 13, 2013</span>
+                  <h5><a href="#">Топ 100 пользователей</a><h5>
                 </li>
                 
                 <li>
-                  <img src="holder.js/45x35" alt="" />
-                  <a href="#">Phasellus rutrum ligula</a>
-                  <span class="clearfix">March 10, 2013</span>
+                  <h5><a href="#">Реклама</a><h5>
                 </li>
                 
               </ul>
             </div>
             
-            <!-- recent comments -->
+            <!-- help -->
             <div class="col-md-3">
-              <h4>Recent Comments</h4>
+              <h3>Помощь</h3>
               <ul>
                 <li class="clearfix">
-                  <img src="holder.js/45x35" alt="" />
-                  <a href="#">Sodales libero quis tellus lacinia viverra. Sed vitae risus.</a>
+                  <h5><a href="#">Регистрация</a><h5>
                 </li>
                 
                 <li class="clearfix">
-                  <img src="holder.js/45x35" alt="" />
-                  <a href="#">Pellentesque facilisis eros sit amet massa rutrum feugiat.</a>
+                  <h5><a href="#">Как тут играть</a><h5>
                 </li>
-                
                 <li class="clearfix">
-                  <img src="holder.js/45x35" alt="" />
-                  <a href="#">condimentum lacus Morbi vulputate metus eurisus.</a>
+                  <h5><a href="#">Герои</a><h5>
+                </li>
+                <li class="clearfix">
+                  <h5><a href="#">Ставки</a><h5>
                 </li>
               </ul>
             </div>
-            
-            <!-- latest tweets -->
+            <!-- publics -->
             <div class="col-md-3">
-            <h4>Latest Tweets</h4>
-              <script src="js/twitter.js"></script>
-              <div id="twitter_list"></div>
+            <h3>Паблики</h3>
+              <ul>
+                <li class="clearfix">
+                  <h5><a href="#">vk.com/indiecups</a><h5>
+                </li>
+              </ul>
             </div>
-            
-            <!-- recent comments -->
+            <!-- help us -->
             <div class="col-md-3">
-              <h4>About GameForest</h4>
+              <h4>Помощь в развитии проекта</h4>
               <ul>
                 <li>
                   <div class="text">
-                    GameForest is a perfect theme for gaming, news and entertainment websites. Built on latest Twitter Bootstrap. Template is available in 4 colors.
+                    Мы очень крутые. Помогите.
                     <br /><br />
-                    <a href="http://themeforest.net/item/gameforest-online-magazine-html-template/5007730" class="btn btn-warning btn-flat btn-block">Purchase <i class="fa fa-shopping-cart"></i></a>
+                    <a href="#" class="btn btn-warning btn-flat btn-block">Donate </a>
                   </div>
                 </li>
               </ul>
@@ -381,28 +373,11 @@
         </div>
       </div>
       <!-- ./footer widget -->
-    
-      <!-- footer tags -->
-      <div class="footer-social">
-        <div class="container">
-            <ul>  
-              <li>Social Media:</li>
-              <li><a href="#" class="tip" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square facebook-text"></i> facebook.com/gameforest</a></li>
-              <li><a href="#" class="tip" data-toggle="tooltip" data-placement="top" title="YouTube"><i class="fa fa-youtube-square youtube-text"></i> youtube.com/gameforest</a></li>
-              <li><a href="#" class="tip" data-toggle="tooltip" data-placement="top" title="Rss"><i class="fa fa-rss-square rss-text"></i> themeforest.net</a></li>
-            </ul>
-        </div>
-      </div>
-      <!-- ./footer tags -->
       <!-- footer bottom -->
       <div class="footer-bottom">
         <div class="container">
             <ul>
-              <li>&copy; 2013 GAMEFOREST. All rights reserved.</li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Ad Choice</a></li>
-              <li><a href="#">Terms of Use</a></li>
-              <li><a href="#">Advertise</a></li>
+              <li>&copy; 2015 INDIECUPS. All rights reserved.</li>
             </ul>
         </div>
       </div>
@@ -416,7 +391,7 @@
     <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&time-locals;</button>
       <h4 class="modal-title" id="signin-title"><i class="fa fa-sign-in"></i> Sign In</h4>
       </div>
       <div class="modal-body">
@@ -469,7 +444,7 @@
     <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&time-locals;</button>
       <h4 class="modal-title" id="register-title"><i class="fa fa-user"></i> Create Account</h4>
       </div>
       <div class="modal-body">
@@ -525,7 +500,7 @@
   <!-- ./register modal -->
   
   <!-- style switcher -->
-  <div id="styleswitcher">
+  <div id="styleswitcher" class="hidden">
   <h2><a href="#"><i class="fa fa-cogs"></i></a></h2>
   <div>
   <h3>Style Configuration</h3>

@@ -9,6 +9,14 @@
 .chat-text{
   float:left; width: 220px;
 }
+.time-local{
+  font-weight: bold;
+  float:right;
+  font-size:15px;
+}
+.chat-text-local{
+  float:left; 
+}
 .mod-game{
   font-size:18px;
   text-align:center;
