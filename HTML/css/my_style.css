@@ -121,4 +121,21 @@
     height: 200px;
     overflow: auto;
   }
+  .table-scroll table{
+    display: block;
+  }
+  .table-scroll thead{
+    display: block;
+  } 
+  .table-scroll thead th{
+    width: 1%;
+  }  
+  .table-scroll tbody{
+    display: block;
+    overflow-y: scroll;
+    height: 400px;
+  }
+  .table-scroll tbody td{
+    width: 1%;
+  }
   
