@@ -146,4 +146,18 @@
   .table-scroll tbody td{
     width: 1%;
   }
+  .nav-pills>li>a {
+    border-radius: 2px;
+  }
+
+  .nav-pills>li>a:hover {
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.4);
+    background: #AEAEAE;
+    color: #fff
+  }
+  .nav-pills>li>a:focus {
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.4);
+    background: #AEAEAE;
+    color: #fff
+  }
   
